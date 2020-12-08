@@ -1,0 +1,277 @@
+/* font - Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
+body {
+	font-family: 'Noto Sans', sans-serif;
+}
+/* layout */
+header {
+	height:100px;
+}
+main {
+
+}
+footer {
+	background:#001454;
+	color:#fff;
+	padding:40px 0;
+}
+.inner-container {
+	width: 1040px;
+	margin: 0 auto;
+	position: relative;
+}
+/* header detail */
+header .inner-container {
+	width: auto;
+	margin: 0 100px;
+}
+header #logo {
+	position: absolute;
+	left:0;
+	top:38px;
+	font-size:24px;
+	font-weight:bold;
+}
+header .btn-application {
+	display:block;
+	position:absolute;
+	right:0;
+	top:30px;
+	width:160px;
+	height:32px;
+	color:#888;
+	font-size:14px;
+	line-height:32px;
+	text-align:center;
+	border:1px solid #ddd;
+}
+#gnb {
+	position:absolute;
+	left:50%;
+	top:37px;
+	width:600px;
+	margin-left:-300px;
+}
+#gnb ul {
+	overflow:hidden;
+	text-align:center;
+}
+#gnb ul li {
+	display:inline-block;
+	margin:0 15px;
+	font-size:16px;
+}
+#gnb ul li a {
+	color:#000;
+}
+/* footer */
+#sitemap {
+	display:flex;
+	padding-bottom:40px;
+	border-bottom:1px solid #475479;
+}
+#sitemap > li {
+	flex-grow:1;
+}
+#sitemap a {
+	color:#fff;
+}
+#sitemap > li > a {
+	font-weight: bold;
+}
+#sitemap ul {
+	margin-top:20px;
+	font-size:14px;
+}
+footer .link {
+	margin-top:40px;
+	text-align:center;
+}
+footer .link a {
+	margin:0 10px;
+}
+footer .copyright {
+	text-align:center;
+	margin-top:20px;
+	font-size:14px;
+}
+footer .copyright span {
+	margin:0 10px;
+}
+footer .copyright a {
+	color:#fff;
+}
+/* 영상 */
+.vod-viewport {
+	position:relative;
+	overflow:hidden;
+	height:550px;
+	background:#000;
+}
+.vod-frame {
+	position:absolute;
+	width:100%;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	padding-bottom:56.25%;
+}
+.vod-frame iframe {
+	position:absolute;
+	left:0; 
+	top:0;
+	width:100%; 
+	height:100%;
+}
+/* 메인 내용 레이아웃 */
+.main-content {
+	padding:60px 0;
+}
+.bg-white {
+	background:#fff;
+}
+.bg-gray {/* main-content*/
+	background:#f8f8f8;
+}
+/* 메인 내용 섹션별 공통 부분 (타이틀, 타이틀 설명) */
+.main-content h2 {
+	font-size:26px;
+	font-weight:bold;
+	text-align:center;
+	line-height:1.2;
+}
+.main-content .title-desc {
+	margin-top:25px;
+	color:#333;
+	text-align:center;
+	font-size:15px;
+	margin-bottom:80px;
+}
+
+/* 상단 섹션 > 바로가기 링크 */
+.main-content .link-box {
+	display:flex;
+}
+.main-content .link-box a {
+	flex:1;
+	position:relative;
+	box-sizing:border-box;
+	height:220px;
+	background:#2c44aa;
+	color:#fff;
+	padding:25px;
+}
+.main-content .link-box a.bg-dark {
+	background:#001255;
+}
+.main-content .link-box h3 {
+	font-weight:600;
+	font-size:16px;
+}
+.main-content .link-box p {
+	font-size:14px;
+	line-height:1.8;
+}
+.main-content .link-box .go-detail {
+	position:absolute;
+	left:25px;
+	bottom:25px;
+	font-size:13px;
+	font-weight:bold;
+}
+
+/* 상단 섹션 > 최근 게시글 */
+.main-news {
+	margin-top:50px;
+}
+.main-news li {
+	display:flex;
+	font-size:15px;
+	padding:8px 0;
+	border-bottom:1px solid #ddd;
+}
+.main-news li .category {
+	flex-shrink: 0;
+	color:#777;
+}
+.main-news li .title {
+	flex-grow:1;
+	padding:0 10px 0 8px;
+	
+	/* Tip.
+	텍스트 한 줄로 보이게 하고, 한 줄 이상 길어지면 말줄임표를 표시하기 위한 속성. 
+	각각의 속성의 의미는 스스로 찾아보세요 :) */
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	/* Tip 끝 */
+}
+.main-news li .title a {
+	color:#000;
+}
+.main-news li .date {
+	flex-basis:75px;
+	flex-shrink: 0;
+	color:#999;
+	font-size:13px;
+}
+
+/* 하단 섹션 > 카드 뉴스 */
+.main-card {
+	overflow:hidden;
+}
+.main-card li {
+	float:left;
+	width:326px;
+	margin-left:31px;
+	margin-bottom:31px;
+	box-sizing:border-box;
+	border:1px solid #e0e0e0;
+}
+.main-card li:nth-child(3n+1) {
+	clear:both;
+	margin-left:0;
+}
+.main-card li a {
+	display:block;
+	padding:20px;
+	color:#000;
+}
+.main-card .thumbnail {
+	margin:-21px;
+	margin-bottom:20px;
+	height:200px;
+	overflow:hidden;
+	position:relative;
+	border-bottom:1px solid #e0e0e0;
+}
+.main-card .thumbnail img {
+	display:block;
+	min-height:100%;
+	position:absolute;
+	left:50%; 
+	top:50%;
+	transform:translate(-50%, -50%);
+}
+.main-card h3 {
+	font-size:16px;
+	line-height:1.4;
+	line-clamp:2;
+	-webkit-line-clamp:2;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	text-overflow:ellipsis;
+}
+.main-card .desc {
+	font-size:13px;
+	line-height:1.4;
+	margin-top:3px;
+	color:#888;
+}
+.main-card .date {
+	margin-top:25px;
+	font-size:11px;
+	line-height:1;
+	color:#999;
+}

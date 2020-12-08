@@ -1,12 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>C-lab Project!</title>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="style.css">
+	<title>거꾸로 캠퍼스</title>
 </head>
 <body>
-	Hello World!
-	<img src="images/pattern.jpg" />
+	<div id="wrap">
+		<!-- Header 시작 -->
+		<header>
+			<div class="inner-container">
+				<h1 id="logo">거꾸로캠퍼스</h1>
+				<nav id="gnb">
+					<ul>
+						<li><a href="">배움의 원칙</a></li>
+						<li><a href="">교육과정</a></li>
+						<li><a href="">학교생활</a></li>
+						<li><a href="">학교소식</a></li>
+						<li><a href="">교육실험실21 소개</a></li>
+					</ul>
+				</nav>
+				<a href="" class="btn-application">입학 상담 및 지원</a>
+			</div>
+		</header>
+		<!-- // Header 끝 -->
+		
+		<!-- 컨텐츠 시작 -->
+		<main>
+			<!-- 영상 : 가로사이즈가 브라우저의 100%를 차지하므로 inner-container 외부에 위치합니다. -->
+			<div class="vod-viewport">
+				<div class="vod-frame">
+					<iframe src="https://player.vimeo.com/video/427031436?title=0&muted=1&autoplay=1&autopause=0&controls=0&loop=1&background=1&app_id=122963" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+					<script src="https://player.vimeo.com/api/player.js"></script>
+				</div>
+			</div>
+			<!-- // 영상 끝 -->
+
+			<!-- *** 유의할 점.
+				- 배경색(하얀색 배경)이 아래 섹션(회색배경)과 구분 되어야 하고, 각 섹션은 브라우저 가로사이즈의 100%를 차지합니다.
+				- 이너컨테이너 안에 배경색을 넣으면 그 영역이 100%를 차지할 수 없으므로 (1040px 고정이니까)
+				[하얀배경영역 (inner 컨테이너 - 컨텐츠)]
+				[회색배경영역 (inner 컨테이너 - 컨텐츠)] 이렇게 나눠야 합니다.
+			-->
+
+			<!-- *** 클래스 선택자 작성 팁
+				id는 태그 하나당 1개만 들어갈 수 있지만, 클래스는 태그 하나에 여러가지 클래스가 들어갈 수 있어요
+				<div class="main-content bg-white">...</div> 이런식으로
+				띄어쓰기로 구분하여 여러개를 적어줄 수 있습니다.
+				그럼 클래스를 활용하여 선택적으로 스타일을 구분해줄 수 있겠죠? (예를들면 배경 따로, 패딩 따로~)
+				
+				그리고 CSS에서 "두 가지 클래스를 동시에 활용할 때만" 스타일을 적용할 수도 있습니다.
+				예) .main-content.bg-white {}
+				위의 예시가 .main-content .bg-white {} 와 차이가 무엇인지 생각해 봅시다~
+			-->
+
+			<!-- 하얀 배경영역 -->
+			<section class="main-content bg-white">
+				<div class="inner-container">
+					<h2>새로운 시대를 열어갈 다음 세대를 위한 새로운 학교</h2>
+					<p class="title-desc">
+						사단법인 교육실험실21의 거꾸로캠퍼스는 21세기 학습자를 위한 미래 역량 중심 교육을 제공하는 실험 학교입니다.<br>
+						미래 사회에서 주체적인 삶을 살며 협력을 통해 긍정적인 변화를 이끄는 인재를 양성합니다.
+					</p>
+					
+					<!-- 파란 박스 바로가기 링크 -->
+					<div class="link-box">
+						<a href="">
+							<h3>배움의 원칙</h3>
+							<p>
+								거꾸로캠퍼스가 실현하는 <br>	
+								21세기 배움의 원칙 아홉 가지
+							</p>
+							<span class="go-detail">자세히보기 →</span>
+						</a>
+						<a href="" class="bg-dark">
+							<h3>교육과정</h3>
+							<p>
+								거꾸로캠퍼스의 교육 과정과<br>
+								교육 프로그램에 대한 안내
+							</p>
+							<span class="go-detail">자세히보기 →</span>
+						</a>
+						<a href="">
+							<h3>학교생활</h3>
+							<p>
+								거꾸로 캠퍼스를 만들어가는<br>	
+								학생과 교사들의 이야기
+							</p>
+							<span class="go-detail">자세히보기 →</span>
+						</a>
+					</div><!-- //파란 박스 바로가기 링크 끝 -->
+
+					<ul class="main-news">
+						<li>
+							<p class="category">언론보도</p>
+							<p class="title">
+								<a href="">[오마이뉴스] 시험, 경쟁, 졸업도 없는 학교... '거꾸로 캠퍼스'의 실체언론</a>
+							</p>
+							<p class="date">2일전</p>
+						</li>
+						<li>
+							<p class="category">공지사항</p>
+							<p class="title">
+								<a href="">제목이 들어갑니다. 제목이 길어질 땐 어떻게 보일 건지 고려해서 코드를 작성하는것이 좋습니다. 제목을 길게 길게 적어보세요. 제목을 길게 길게 적어보세요. 제목을 길게 길게 적어보세요.</a>
+							</p>
+							<p class="date">2020-09-15</p>
+						</li>
+						<li>
+							<p class="category">공지사항</p>
+							<p class="title">
+								<a href="">제목이 들어갑니다</a>
+							</p>
+							<p class="date">2020-09-15</p>
+						</li>
+						<li>
+							<p class="category">공지사항</p>
+							<p class="title">
+								<a href="">제목이 들어갑니다</a>
+							</p>
+							<p class="date">2020-09-15</p>
+						</li>
+						<li>
+							<p class="category">공지사항</p>
+							<p class="title">
+								<a href="">제목이 들어갑니다</a>
+							</p>
+							<p class="date">2020-09-15</p>
+						</li>
+						<li>
+							<p class="category">공지사항</p>
+							<p class="title">
+								<a href="">제목이 들어갑니다</a>
+							</p>
+							<p class="date">2020-09-15</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- // 하얀 배경영역 끝 -->
+			
+			<!-- 회색 배경영역 -->
+			<section class="main-content bg-gray">
+				<div class="inner-container">
+					<h2>학생과 교사가 함께 변화의 주체가 되어 미래의 학교를 만듭니다</h2>
+					<p class="title-desc">
+						거꾸로캠퍼스의 모든 순간은 특별합니다. 학생의 배움과 성장을 위해 변화하는 학교를 확인해보세요.
+					</p>
+
+					<ul class="main-card">
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample1.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>COVID-19에도 멈추지 않았던 거꾸로캠퍼스의 협력적 문제해결 학습 교육</h3>
+								<p class="desc">&lt;Education In Focus&gt;는 미주개발은행(Inter-American Development Bank)의 교육부가 운영하는 블로그입니다. 정책 입안자, 교육 전문</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample2.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>제목이 들어갑니다.</h3>
+								<p class="desc">내용이 들어갑니다. 내용이 짧을 때 어떻게 보여야 할지 스타일을 고려합니다.</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample2.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>제목이 들어갑니다. 제목이 두 줄 이상일 때는 말줄임표를 보이게 해 봅시다. CSS를 살펴보세요!</h3>
+								<p class="desc">내용이 들어갑니다. 내용이 짧을 때 어떻게 보여야 할지 스타일을 고려합니다.</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample1.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>제목이 들어갑니다. 제목이 두 줄 이상일 때는 말줄임표를 보이게 해 봅시다. CSS를 살펴보세요!</h3>
+								<p class="desc">내용이 들어갑니다. 내용이 짧을 때 어떻게 보여야 할지 스타일을 고려합니다.</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample2.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>제목이 들어갑니다.</h3>
+								<p class="desc">내용이 들어갑니다. 내용이 짧을 때 어떻게 보여야 할지 스타일을 고려합니다.</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="thumbnail">
+									<img src="images/img_sample2.png" alt="이미지 설명이 들어가는 자리입니다.">
+								</div>
+								<h3>제목이 들어갑니다. 제목이 두 줄 이상일 때는 말줄임표를 보이게 해 봅시다. CSS를 살펴보세요!</h3>
+								<p class="desc">내용이 들어갑니다. 내용이 짧을 때 어떻게 보여야 할지 스타일을 고려합니다.</p>
+								<p class="date">2020-10-11</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- // 회색 배경영역 끝 -->
+
+		</main>
+		<!-- // 컨텐츠 끝 -->
+
+		<!-- Footer 시작 -->
+		<footer>
+			<div class="inner-container">
+				<nav>
+					<!-- 사이트맵 -->
+					<ul id="sitemap">
+						<li><a href="">배움의 원칙</a>
+							<ul>
+								<li><a href="">아홉가지 원칙</a></li>
+								<li><a href="">학교 설명서</a></li>
+							</ul>
+						</li>
+						<li><a href="">교육과정</a>
+							<ul>
+								<li><a href="">교육과정</a></li>
+								<li><a href="">특별과정</a></li>
+								<li><a href="">평가방식</a></li>
+								<li><a href="">학비안내</a></li>
+							</ul>
+						</li>
+						<li><a href="">학교생활</a>
+							<ul>
+								<li><a href="">학교 이야기</a></li>
+								<li><a href="">재학생 이야기</a></li>
+								<li><a href="">졸업생 이야기</a></li>
+								<li><a href="">교사 이야기</a></li>
+							</ul>
+						</li>
+						<li><a href="">블로그</a>
+							<ul>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">학교소식</a></li>
+							</ul>
+						</li>
+						<li><a href="">소개</a>
+							<ul>
+								<li><a href="">비전과 미션</a></li>
+								<li><a href="">교육팀</a></li>
+								<li><a href="">운영팀</a></li>
+								<li><a href="">연혁</a></li>
+								<li><a href="">소개</a></li>
+								<li><a href="">로고 다운로드</a></li>
+								<li><a href="">어워드</a></li>
+							</ul>
+						</li>
+						<li><a href="">지원하기</a>
+							<ul>
+								<li><a href="">지원방법 및 입학절차</a></li>
+								<li><a href="">입학상담 신청</a></li>
+								<li><a href="">입학지원서 신청</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- SNS 링크 -->
+				<p class="link">
+					<a href="">
+						<img src="images/icon_facebook.png" alt="페이스북" />
+					</a>
+					<a href="">
+						<img src="images/icon_youtube.png" alt="유튜브" />
+					</a>
+					<a href="">
+						<img src="images/icon_instagram.png" alt="인스타그램" />
+					</a>
+				</p>
+
+				<!-- 카피라이트 -->
+				<p class="copyright">
+					<span>(사)교육실험실21</span>    
+					<span>대표 이성원</span>
+					<span>주소 [03086] 서울특별시 종로구 대학로 116 4층 (공공일호)</span>
+					<span>메일 <a href="mailto:contact@gschool.kr">contact@gschool.kr</a></span>
+					<span>전화 02-742-0077</span>
+				</p>
+			</div>
+		</footer>
+		<!-- // Footer 끝 -->
+	</div>
 </body>
 </html>
