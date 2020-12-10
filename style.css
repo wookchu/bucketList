@@ -11,7 +11,7 @@ main {
 
 }
 footer {
-	background:#001454;
+	background:#5d0e0e;
 	color:#fff;
 	padding:40px 0;
 }
@@ -68,7 +68,7 @@ header .btn-application {
 #sitemap {
 	display:flex;
 	padding-bottom:40px;
-	border-bottom:1px solid #475479;
+	border-bottom:1px solid #7b2323;
 }
 #sitemap > li {
 	flex-grow:1;
@@ -157,12 +157,12 @@ footer .copyright a {
 	position:relative;
 	box-sizing:border-box;
 	height:220px;
-	background:#2c44aa;
+	background:#bd2c32;
 	color:#fff;
 	padding:25px;
 }
 .main-content .link-box a.bg-dark {
-	background:#001255;
+	background:#8a2c32;
 }
 .main-content .link-box h3 {
 	font-weight:600;
