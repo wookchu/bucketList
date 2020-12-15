@@ -275,3 +275,58 @@ footer .copyright a {
 	line-height:1;
 	color:#999;
 }
+
+/* slider */
+#slider-wrap {
+	width:100%;
+	overflow:hidden;
+	position:relative;
+}
+#slider {
+	width: 300%;
+	transition: transform 0.3s ease;
+}
+#slider .item {
+	width: 1040px;
+	float:left;
+}
+#slider .item img {
+	width:100%;
+}
+#slider-pages {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	bottom:40px;
+	left:0;
+}
+#slider-pages button {
+	width:30px;
+	height:30px;
+	border-radius:100%;
+	margin:0 5px;
+	font-size:11px;
+	background:rgba(0, 0, 0, 0.8);
+	border:2px solid #fff;
+	cursor:pointer;
+	color:#fff;
+}
+#slider-pages button.active {
+	background:rgba(200, 0, 0, .8);
+	font-weight:bold;
+}
+#slider-controls button {
+	position:absolute;
+	top:50%;
+	margin-top:-40px;
+	background:none;
+	border:0;
+	padding:0;
+	cursor:pointer;
+}
+#slider-controls button.prev {
+	left:0;
+}
+#slider-controls button.next {
+	right:0;
+}
