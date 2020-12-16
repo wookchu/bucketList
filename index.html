@@ -213,6 +213,61 @@
 			</section>
 			<!-- // 회색 배경영역 끝 -->
 
+			<!-- 이미지 슬라이드-->
+			<section class="main-content">
+				<div class="inner-container">
+					<div id="slider-wrap">
+						<div id="slider">
+							<div class="item"><img src="images/slide_sample1.jpg" alt="슬라이드 이미지1"></div>
+							<div class="item"><img src="images/slide_sample2.jpg" alt="슬라이드 이미지2"></div>
+							<div class="item"><img src="images/slide_sample3.jpg" alt="슬라이드 이미지3"></div>
+						</div>
+						
+
+						<div id="slider-pages">
+							<button class="active">1</button>
+							<button>2</button>
+							<button>3</button>
+						</div>
+
+						<div id="slider-controls">
+							<button class="prev"><img src="images/btn_prev.png" alt="이전"></button>
+							<button class="next"><img src="images/btn_next.png" alt="다음"></button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<script>
+				var buttons = document.querySelectorAll('#slider-pages button');
+				var currentIndex = 0;
+
+				buttons.forEach(function(el, i) {
+					el.addEventListener('click', function(e) {
+						moveSlide(i);
+						currentIndex = i;
+					});
+				});
+
+				document.querySelector('#slider-controls .prev').addEventListener('click', function(){
+					currentIndex = (currentIndex == 0) ? currentIndex : currentIndex - 1;
+					moveSlide(currentIndex);
+
+				});
+				
+				document.querySelector('#slider-controls .next').addEventListener('click', function(){
+					currentIndex = (currentIndex == buttons.length - 1) ? currentIndex : currentIndex + 1;
+					moveSlide(currentIndex);
+				});
+
+				function moveSlide(index) {
+					document.getElementById('slider').style.transform = 'translate(' + index * (-1040) + 'px)';
+					buttons.forEach(function(el) {
+						el.className = '';
+					});
+					buttons[index].className = 'active';
+				}
+			</script>
 		</main>
 		<!-- // 컨텐츠 끝 -->
 
